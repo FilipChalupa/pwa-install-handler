@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/Onset/pwa-install-handler.git"
   },
-  "keywords": [],
+  "keywords": ["pwa", "installation", "beforeinstallprompt", "typescript"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
