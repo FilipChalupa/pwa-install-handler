@@ -13,8 +13,17 @@
     "type": "git",
     "url": "https://github.com/Onset/pwa-install-handler.git"
   },
-  "keywords": ["pwa", "installation", "beforeinstallprompt", "typescript"],
-  "author": "",
+  "keywords": [
+    "pwa",
+    "installation",
+    "beforeinstallprompt",
+    "typescript"
+  ],
+  "author": {
+    "name": "Filip Chalupa",
+    "email": "chalupa.filip@gmail.com",
+    "url": "https://www.npmjs.com/~onset"
+  },
   "license": "ISC",
   "devDependencies": {
     "typescript": "^3.3.3"
