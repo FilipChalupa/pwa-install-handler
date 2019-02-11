@@ -1,37 +1,52 @@
-type CanInstallCallback = (canInstall: boolean) => void
-type InstallEvent = Event | null
+import BeforeInstallPromptEvent from './BeforeInstallPromptEvent'
 
-class Install {
-	private event: InstallEvent = null
+type CanInstallCallback = (
+	canInstall: boolean,
+	install?: () => Promise<boolean>
+) => void
+
+class PwaInstallHandler {
+	private event: BeforeInstallPromptEvent | null = null
 	private callbacks: CanInstallCallback[] = []
 
 	constructor() {
 		window.addEventListener('beforeinstallprompt', (event) => {
 			event.preventDefault()
-			this.updateEvent(event)
+			this.updateEvent(event as BeforeInstallPromptEvent)
 		})
 	}
 
-	public prompt() {
-		// @ts-ignore
-		this.event.prompt()
-		// @ts-ignore
-		this.event.userChoice.then(() => {
-			this.updateEvent(null)
-		})
+	public install = async (): Promise<boolean> => {
+		if (this.event) {
+			this.event.prompt()
+			return await this.event.userChoice.then(({ outcome }) => {
+				this.updateEvent(null)
+				return outcome === 'accepted' || true
+			})
+		} else {
+			throw new Error('Not allowed to prompt.')
+		}
 	}
 
-	private updateEvent(event: InstallEvent) {
+	public getEvent() {
+		return this.event
+	}
+
+	private updateEvent(event: BeforeInstallPromptEvent | null) {
 		this.event = event
 		this.callbacks.forEach((callback) => callback(Boolean(event)))
 	}
 
-	public addListener(callback: CanInstallCallback) {
+	public addListener(callback: CanInstallCallback): void {
 		callback(Boolean(this.event))
 		this.callbacks.push(callback)
 	}
+
+	public removeListener(callback: CanInstallCallback): void {
+		this.callbacks.filter((cb) => callback !== cb)
+	}
 }
 
-const install = new Install()
+const pwaInstallHandler = new PwaInstallHandler()
 
-export default install
+export default pwaInstallHandler
