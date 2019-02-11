@@ -40,7 +40,7 @@ $button.addEventListener('click', () => {
 
 ### Screencast
 
-![Goodlok](screencast.gif)
+![UI example](./screencast.gif)
 
 ## Methods
 
