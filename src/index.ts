@@ -32,6 +32,10 @@ class PwaInstallHandler {
 		return this.event
 	}
 
+	public canInstall() {
+		return Boolean(this.event)
+	}
+
 	private updateEvent(event: BeforeInstallPromptEvent | null) {
 		this.event = event
 		this.callbacks.forEach((callback) => callback(Boolean(event)))
