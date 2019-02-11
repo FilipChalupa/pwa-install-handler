@@ -13,5 +13,12 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^3.3.3"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "useTabs": true,
+    "arrowParens": "always"
   }
 }
