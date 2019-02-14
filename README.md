@@ -2,7 +2,7 @@
 
 Handling PWA installation prompt made easier. [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/onbeforeinstallprompt)
 
-## Instalation
+## Installation
 
 `npm install --save-dev pwa-install-handler`
 
