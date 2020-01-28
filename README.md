@@ -50,15 +50,19 @@ pwaInstallHandler.install: () => Promise<boolean>
 
 ```typescript
 pwaInstallHandler.addListener: (
-	callback: (canInstall: boolean) => void,
-	install?: () => Promise<boolean>
+	(
+		callback: (canInstall: boolean) => void,
+		install?: () => Promise<boolean>
+	) => void
 ) => void
 ```
 
 ```typescript
 pwaInstallHandler.removeListener: (
-	callback: (canInstall: boolean) => void,
-	install?: () => Promise<boolean>
+	(
+		callback: (canInstall: boolean) => void,
+		install?: () => Promise<boolean>
+	) => void
 ) => void
 ```
 
