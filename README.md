@@ -76,6 +76,6 @@ pwaInstallHandler.getEvent: () => BeforeInstallPromptEvent | null
 
 ## Notes
 
-You PWA must meet some requirements to be installable. Without that the `canInstall` will always be `false`. The requirements are browser specific. You can read more about it [here](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installable_PWAs#Requirements).
+You PWA must meet some requirements to be installable. Without that the `canInstall` will always be `false`. The requirements are browser specific. You can read more about it [here (MDN)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installable_PWAs#Requirements) and [here (web.dev)](https://web.dev/install-criteria/).
 
 Some browsers don't support custom install button. These will have `canInstall` always set to `false` too. For more information check [BeforeInstallPromptEvent support](https://caniuse.com/#feat=mdn-api_beforeinstallpromptevent).
