@@ -10,6 +10,10 @@ class PwaInstallHandler {
 	private callbacks: CanInstallCallback[] = []
 
 	constructor() {
+		if (typeof window === undefined) {
+			return
+		}
+
 		window.addEventListener('beforeinstallprompt', (event) => {
 			event.preventDefault()
 			this.updateEvent(event as BeforeInstallPromptEvent)
