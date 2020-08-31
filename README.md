@@ -4,7 +4,9 @@ Handling PWA installation prompt made easier. [MDN docs](https://developer.mozil
 
 ## Installation
 
-`npm install --save-dev pwa-install-handler`
+```sh
+npm install pwa-install-handler
+```
 
 ## Usage
 
