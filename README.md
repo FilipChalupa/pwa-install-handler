@@ -30,13 +30,7 @@ pwaInstallHandler.addListener((canInstall) => {
 })
 
 $button.addEventListener('click', () => {
-	pwaInstallHandler.install().then((isInstalled) => {
-		console.log(
-			isInstalled
-				? 'User accepted installation prompt'
-				: 'User rejected installation prompt'
-		)
-	})
+	pwaInstallHandler.install()
 })
 ```
 
