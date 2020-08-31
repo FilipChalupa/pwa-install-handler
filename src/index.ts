@@ -10,7 +10,7 @@ class PwaInstallHandler {
 	private callbacks: CanInstallCallback[] = []
 
 	constructor() {
-		if (typeof window === undefined) {
+		if (typeof window === 'undefined') {
 			return
 		}
 
