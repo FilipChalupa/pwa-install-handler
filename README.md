@@ -36,7 +36,7 @@ $button.addEventListener('click', () => {
 
 ### Screencast
 
-![UI example](./screencast.gif)
+![UI example](https://raw.githubusercontent.com/FilipChalupa/pwa-install-handler/HEAD/screencast.gif)
 
 ## Methods
 
