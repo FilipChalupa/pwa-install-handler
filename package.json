@@ -1,38 +1,38 @@
 {
-  "name": "pwa-install-handler",
-  "version": "2.1.4",
-  "description": "Handle beforeinstallprompt event in your PWA.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "prepare": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/FilipChalupa/pwa-install-handler.git"
-  },
-  "keywords": [
-    "pwa",
-    "installation",
-    "beforeinstallprompt",
-    "typescript"
-  ],
-  "author": {
-    "name": "Filip Chalupa",
-    "email": "chalupa.filip@gmail.com",
-    "url": "https://www.npmjs.com/~onset"
-  },
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^3.3.3"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "useTabs": true,
-    "arrowParens": "always"
-  }
+	"name": "pwa-install-handler",
+	"version": "2.1.4",
+	"description": "Handle beforeinstallprompt event in your PWA.",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tsc",
+		"prepare": "npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FilipChalupa/pwa-install-handler.git"
+	},
+	"keywords": [
+		"pwa",
+		"installation",
+		"beforeinstallprompt",
+		"typescript"
+	],
+	"author": {
+		"name": "Filip Chalupa",
+		"email": "chalupa.filip@gmail.com",
+		"url": "https://www.npmjs.com/~onset"
+	},
+	"license": "ISC",
+	"devDependencies": {
+		"typescript": "^3.3.3"
+	},
+	"prettier": {
+		"semi": false,
+		"singleQuote": true,
+		"trailingComma": "es5",
+		"useTabs": true,
+		"arrowParens": "always"
+	}
 }
