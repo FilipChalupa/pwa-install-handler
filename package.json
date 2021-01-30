@@ -1,6 +1,6 @@
 {
 	"name": "pwa-install-handler",
-	"version": "2.1.4",
+	"version": "2.1.5",
 	"description": "Handle beforeinstallprompt event in your PWA.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
