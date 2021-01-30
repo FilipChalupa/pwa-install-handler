@@ -34,6 +34,10 @@ $button.addEventListener('click', () => {
 })
 ```
 
+### React
+
+For more information see [react-use-pwa-install](https://www.npmjs.com/package/react-use-pwa-install).
+
 ### Screencast
 
 ![UI example](https://raw.githubusercontent.com/FilipChalupa/pwa-install-handler/HEAD/screencast.gif)
