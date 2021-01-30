@@ -13,7 +13,7 @@ npm install pwa-install-handler
 ### HTML
 
 ```html
-<button role="button" id="installButton" style="display: none;">
+<button id="installButton" style="display: none;">
 	Install
 </button>
 ```
