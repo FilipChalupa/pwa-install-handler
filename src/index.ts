@@ -18,6 +18,10 @@ class PwaInstallHandler {
 			event.preventDefault()
 			this.updateEvent(event as BeforeInstallPromptEvent)
 		})
+
+		window.addEventListener('appinstalled', (event) => {
+			this.updateEvent(null)
+		})
 	}
 
 	public install = async (): Promise<boolean> => {
@@ -41,6 +45,9 @@ class PwaInstallHandler {
 	}
 
 	private updateEvent(event: BeforeInstallPromptEvent | null) {
+		if (event === this.event) {
+			return
+		}
 		this.event = event
 		this.callbacks.forEach((callback) => callback(Boolean(event)))
 	}
