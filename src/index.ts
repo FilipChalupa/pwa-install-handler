@@ -41,7 +41,7 @@ class PwaInstallHandler {
 	}
 
 	public canInstall() {
-		return Boolean(this.event)
+		return this.event !== null
 	}
 
 	private updateEvent(event: BeforeInstallPromptEvent | null) {
@@ -49,11 +49,11 @@ class PwaInstallHandler {
 			return
 		}
 		this.event = event
-		this.callbacks.forEach((callback) => callback(Boolean(event)))
+		this.callbacks.forEach((callback) => callback(this.canInstall()))
 	}
 
 	public addListener(callback: CanInstallCallback): void {
-		callback(Boolean(this.event))
+		callback(this.canInstall())
 		this.callbacks.push(callback)
 	}
 
