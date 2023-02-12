@@ -13,9 +13,7 @@ npm install pwa-install-handler
 ### HTML
 
 ```html
-<button id="installButton" style="display: none;">
-	Install
-</button>
+<button id="installButton" style="display: none;">Install</button>
 ```
 
 ### JavaScript
@@ -41,6 +39,10 @@ For more information see [react-use-pwa-install](https://www.npmjs.com/package/r
 ### Screencast
 
 ![UI example](https://raw.githubusercontent.com/FilipChalupa/pwa-install-handler/HEAD/screencast.gif)
+
+### Demo
+
+Check [website](https://filipchalupa.cz/pwa-install-handler/) or [code](https://github.com/FilipChalupa/pwa-install-handler/tree/main/demo).
 
 ## Methods
 
