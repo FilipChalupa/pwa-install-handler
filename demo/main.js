@@ -1,4 +1,4 @@
-import { pwaInstallHandler } from 'https://unpkg.com/pwa-install-handler@latest'
+import { pwaInstallHandler } from 'https://unpkg.com/pwa-install-handler@latest?module'
 
 const $button = document.querySelector('#installButton')
 
