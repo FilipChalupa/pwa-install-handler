@@ -21,7 +21,7 @@ npm install pwa-install-handler
 ### JavaScript
 
 ```javascript
-import pwaInstallHandler from 'pwa-install-handler'
+import { pwaInstallHandler } from 'pwa-install-handler'
 
 const $button = document.querySelector('#installButton')
 
