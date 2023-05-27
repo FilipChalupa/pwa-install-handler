@@ -58,7 +58,9 @@ class PwaInstallHandler {
 	}
 
 	public removeListener(callback: CanInstallCallback): void {
-		this.callbacks = this.callbacks.filter((cb) => callback !== cb)
+		this.callbacks = this.callbacks.filter(
+			(otherCallback) => callback !== otherCallback
+		)
 	}
 }
 
