@@ -24,6 +24,9 @@ class PwaInstallHandler {
 		})
 	}
 
+	/**
+	 * Triggers install prompt.
+	 */
 	public install = async (): Promise<boolean> => {
 		if (this.event) {
 			this.event.prompt()
@@ -36,10 +39,16 @@ class PwaInstallHandler {
 		}
 	}
 
+	/**
+	 * Returns internal `BeforeInstallPromptEvent`.
+	 */
 	public getEvent() {
 		return this.event
 	}
 
+	/**
+	 * Tells whether the app is ready to be installed.
+	 */
 	public canInstall() {
 		return this.event !== null
 	}
@@ -52,11 +61,17 @@ class PwaInstallHandler {
 		this.callbacks.forEach((callback) => callback(this.canInstall()))
 	}
 
+	/**
+	 * Adds listener with a callback which is called when installability state changes.
+	 */
 	public addListener(callback: CanInstallCallback): void {
 		callback(this.canInstall())
 		this.callbacks.push(callback)
 	}
 
+	/**
+	 * Removes listener.
+	 */
 	public removeListener(callback: CanInstallCallback): void {
 		this.callbacks = this.callbacks.filter(
 			(otherCallback) => callback !== otherCallback
