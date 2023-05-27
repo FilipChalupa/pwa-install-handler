@@ -1,4 +1,4 @@
-import BeforeInstallPromptEvent from './BeforeInstallPromptEvent'
+import { BeforeInstallPromptEvent } from './BeforeInstallPromptEvent'
 
 type CanInstallCallback = (
 	canInstall: boolean,
@@ -63,5 +63,3 @@ class PwaInstallHandler {
 }
 
 export const pwaInstallHandler = new PwaInstallHandler()
-
-export default pwaInstallHandler // @TODO: remove default export in favor of named in next major version
