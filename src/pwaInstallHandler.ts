@@ -19,7 +19,7 @@ class PwaInstallHandler {
 			this.updateEvent(event as BeforeInstallPromptEvent)
 		})
 
-		window.addEventListener('appinstalled', (event) => {
+		window.addEventListener('appinstalled', () => {
 			this.updateEvent(null)
 		})
 	}
