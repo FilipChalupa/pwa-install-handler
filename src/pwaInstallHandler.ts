@@ -2,7 +2,7 @@ import { BeforeInstallPromptEvent } from './BeforeInstallPromptEvent'
 
 type CanInstallCallback = (
 	canInstall: boolean,
-	install?: () => Promise<boolean>
+	install?: () => Promise<boolean>,
 ) => void
 
 class PwaInstallHandler {
@@ -74,7 +74,7 @@ class PwaInstallHandler {
 	 */
 	public removeListener(callback: CanInstallCallback): void {
 		this.callbacks = this.callbacks.filter(
-			(otherCallback) => callback !== otherCallback
+			(otherCallback) => callback !== otherCallback,
 		)
 	}
 }
