@@ -32,7 +32,7 @@ class PwaInstallHandler {
 			this.event.prompt()
 			return await this.event.userChoice.then(({ outcome }) => {
 				this.updateEvent(null)
-				return outcome === 'accepted' || true
+				return outcome === 'accepted'
 			})
 		} else {
 			throw new Error('Not allowed to prompt.')
