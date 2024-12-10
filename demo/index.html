@@ -13,6 +13,9 @@
 				margin-inline: auto;
 				padding-inline: 1rem;
 			}
+			#installButton {
+				font-size: 2em;
+			}
 		</style>
 		<script src="main.js" type="module"></script>
 	</head>
@@ -25,6 +28,8 @@
 			>
 			for more information.
 		</p>
-		<button id="installButton" style="display: none">Install</button>
+		<button id="installButton" style="visibility: hidden">Install</button>
+		<h2>Log output</h2>
+		<output id="logOutput"><ul></ul></output>
 	</body>
 </html>
