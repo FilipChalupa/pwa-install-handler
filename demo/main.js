@@ -7,17 +7,24 @@ const log = (message) => {
 	const $logItem = document.createElement('li')
 	const now = new Date()
 	$logItem.textContent = `[${now.toLocaleTimeString()}.${now.getMilliseconds()}] ${message}`
-	$logOutput.prepend($logItem)
+	$logOutput.appendChild($logItem)
 }
+
+log('ℹ️ Application has started.')
 
 pwaInstallHandler.addListener((canInstall) => {
 	$button.style.visibility = canInstall ? 'inherit' : 'hidden'
-	log(canInstall ? '✔️ App can be installed.' : '⚠️ App cannot be installed.')
+	log(
+		canInstall
+			? '✔️ Application can be installed.'
+			: '⚠️ Application cannot be installed.',
+	)
 })
 
 $button.addEventListener('click', async () => {
+	log('ℹ️ User requested application installation.')
 	const result = await pwaInstallHandler.install()
-	log(result ? '✔️ App installed.' : '❌ App not installed.')
+	log(result ? '✔️ Application installed.' : '❌ Application not installed.')
 })
 
 if ('serviceWorker' in navigator) {
