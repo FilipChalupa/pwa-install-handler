@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PWA install demo</title>
+		<meta name="color-scheme" content="light dark" />
+		<link rel="manifest" href="manifest.webmanifest" />
+		<style>
+			body {
+				font-family: sans-serif;
+				max-width: 37rem;
+				margin-inline: auto;
+				padding-inline: 1rem;
+			}
+			#installButton {
+				font-size: 2em;
+			}
+		</style>
+		<script src="main.js" type="module"></script>
+	</head>
+	<body>
+		<h1>PWA install demo</h1>
+		<p>
+			If applicable install button will appear below. Check out
+			<a href="https://github.com/FilipChalupa/pwa-install-handler#readme"
+				>README</a
+			>
+			for more information.
+		</p>
+		<button id="installButton" style="visibility: hidden">Install</button>
+		<h2>Log output</h2>
+		<output id="logOutput"><ul></ul></output>
+	</body>
+</html>
