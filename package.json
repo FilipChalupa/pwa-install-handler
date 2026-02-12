@@ -31,9 +31,6 @@
 		"/dist/"
 	],
 	"license": "ISC",
-	"engines": {
-		"node": "^20.20.0"
-	},
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "^24.0.1",
 		"@rollup/plugin-node-resolve": "^15.0.1",
